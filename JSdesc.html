@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Numbers in Descending Order</title>
+</head>
+<body>
+    <h1>Sort Numbers in Ascending Order</h1>
+
+    <label for="inputNumbers">Enter numbers (comma-separated): </label>
+    <input type="text" id="inputNumbers" placeholder="e.g., 1, 2, 3, 4, 5">
+    <button onclick="sortNumbers()">Sort Numbers</button>
+    <h2>Sorted Array:</h2>
+    <p id="num1"></p>
+
+    <script>
+        function sortNumbers() 
+        {
+            const input = document.getElementById("inputNumbers").value;
+            const nums = input.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num));
+            nums.sort(function (a, b) { return b - a});
+            document.getElementById("num1").innerHTML = nums;
+        }
+    </script>
+</body>
+</html>

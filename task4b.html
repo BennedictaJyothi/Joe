@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container-fluid">
+            <h1 class="text-start ms-3 display-1 fw-bold"><i>Your Cart</i></h1>
+            <ul class="navbar-nav nav justify-content-end me-5">
+                <li class="nav-item"><a class="nav-link fw-bold" href="file:///C:/Users/Training/Downloads/Task-Bennedicta/Task4JS.html">Home</a></li>
+                <li><a class="nav-link fw-bold active" href="file:///C:/Users/Training/Downloads/Task-Bennedicta/task4b.html">Shopping Cart</a></li>
+                <li><a class="nav-link fw-bold" href="#">Contact Us</a></li>
+                <li><a class="nav-link fw-bold" href="file:///C:/Users/Training/Downloads/Task-Bennedicta/Task4clogin.html">Log In</a></li>
+            </ul>
+        </div>
+    </nav>
+    <hr class="border-5" style="position: relative;bottom: 20px;">
+    <div class="container ms-5">
+        <div class="row" id="cartList"></div>
+        <div class="mt-3">
+            <button onclick="clearCart()" class="btn btn-outline-warning">Clear Cart</button>
+            <a href="file:///C:/Users/Training/Downloads/Task-Bennedicta/Task4JS.html" class="btn btn-warning">Back to Shop</a>
+        </div>
+        <div class="bg-dark text-white text-center p-3 mt-3 rounded-4">
+            <h5 id="totalAmount"></h5>
+        </div>
+    </div>
+    <script>
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartList = document.getElementById('cartList');
+            cartList.innerHTML = '';
+            let total = 0; // Initialize total
+
+            if (cart.length === 0) {
+                cartList.innerHTML = '<div class="col-12"><div class="alert alert-warning">Your cart is empty.</div></div>';
+                document.getElementById('totalAmount').innerHTML = ''; // Clear total amount
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                const subtotal = item.price * item.quantity; // Calculate subtotal
+                total += subtotal; // Add to total
+
+                const li = document.createElement('div');
+                li.className = 'd-inline-block mb-3 border border-secondary p-3 rounded'; // Use d-inline-block for width based on content
+                li.innerHTML = `
+                    <div class="d-flex align-items-center">
+                        <img src="${item.imgSrc}" alt="${item.name}" width="100" class="me-3">
+                        <div>
+                            <h5 class="card-title">${item.name}</h5>
+                            <p>Price: $${item.price} x ${item.quantity} = $${subtotal}</p>
+                            <button onclick="removeFromCart(${index})" class="btn btn-danger btn-sm">Remove</button>
+                        </div>
+                    </div>
+                `;
+                cartList.appendChild(li);
+            });
+
+            // Display total amount
+            document.getElementById('totalAmount').innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            displayCart();
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1); // Remove item at the specified index
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart(); // Refresh the cart display
+        }
+
+        displayCart();
+    </script>
+</body>
+</html>

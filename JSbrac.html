@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Exact Brackets</title>
+</head>
+<style>
+    button {
+        color: aliceblue;
+        background-color: cornflowerblue;
+        width: 70px;
+        height: 50px;
+    }
+    button:hover {
+        color: aquamarine;
+        cursor: pointer;
+       
+    }
+    input {
+        height: 45px;
+    }
+</style>
+<body>
+    <center>
+        <i><h2 style="font-family: sans-serif;">Enter Brackets</h2></i>
+        <input type="text" id="userInput" placeholder="Enter exact value">
+        <button onclick="checkInput()">Check</button>
+        <p id="output"></p>
+    </center>
+    <script>
+        function isValidBrackets(input) 
+        {
+            if (!/^[\[\]\{\}\(\)]*$/.test(input)) 
+            {
+                return false;
+            }
+            const stack = [];
+            const matchingBrackets = 
+            {
+                '(': ')',
+                '{': '}',
+                '[': ']'
+            };
+
+            for (let char of input) 
+            {
+                if (matchingBrackets[char]) 
+                {
+                    stack.push(char);
+                } else 
+                {
+                    const lastOpening = stack.pop();
+                    if (matchingBrackets[lastOpening] !== char) 
+                    {
+                        return false;
+                    }
+                }
+            }
+            return stack.length === 0;
+        }
+
+        function checkInput() 
+        {
+            const input = document.getElementById('userInput').value;
+            const result = isValidBrackets(input) ? "Correct Format" : "Incorrect Format";
+            document.getElementById('output').innerText = result;
+        }
+    </script>
+</body>
+</html>

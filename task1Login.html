@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .log{
+        background-color: rgb(180, 209, 203);
+        font-size: larger;
+        font-family: sans-serif;
+        height: 200px;
+        width: 300;
+        border-radius: 5%;
+        margin: 300px;
+        padding: 40px;
+    }
+    input[type=text], input[type=password]{
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    button{
+        background-color:rgb(247, 67, 88);
+        color: aliceblue;
+        height: 40px;
+        width: 70px;
+        display: block;
+        border-color: rgb(247, 67, 88);
+        border-style: solid;
+        border-radius: 5px;
+        font-family:sans-serif;
+        font-size:large;
+    }
+    button:hover{
+        background-color: rgb(241, 28, 195);
+        cursor: pointer;
+    }
+    
+</style>
+<body style="background-color: rgb(247, 67, 88); color: cornflowerblue;">
+    <div class="log">
+        <form>
+            <label for="uname">UserName:</label> 
+            <input type="text" name="uname" required>
+            <br>
+            <br>
+            <label for="psw">Password:</label>
+            <input type="password" password="psw" required>
+            <br>
+            <button>LOGIN</button>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+</head>
+<style>
+    .one{
+    background-color: rgb(3, 54, 149);
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    position:static;
+    }
+    .two{
+        background-color: rgb(3, 149, 22);
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+        position: relative;
+        left: 60px;
+        bottom: 40px;
+    }
+    .three{
+        background-color: rgb(144, 163, 5);
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+        position: relative;
+        left: 60px;
+        top: 70px;
+        z-index: 3;
+    }
+    .four{
+        background-color: chartreuse;
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+        position: relative;
+        z-index: 6;
+
+    }
+</style>
+<body>
+    <div class ="one"></div>
+    <div class="two"></div>
+    <div class ="three"></div>
+    <div class="four"></div>
+</body>
+</html>

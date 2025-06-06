@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 onclick ="this.innerHTML = 'Oops..'">
+        Click on the text!!!</h2>
+
+    <h1 onclick = "ChangeText(this)">Click on the text</h1>
+
+    Enter your name :<input type="text" id="fname" oninput="uppercase()">
+
+    enter your name :<input type="text" id="fname" onchange="upperCase()">
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+    style="background-color: aquamarine;width: 125px;height: 50px;padding: 40px;">Mouse over me</div>
+    <script>
+        function ChangeText(id){
+            id.innerHTML = "Hello there";
+        }
+        function uppercase(){
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+        function upperCase() {
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+        function mOver(obj){
+            obj.innerHTML = "hiii"
+        }
+        function mOut(obj){
+            obj.innerHTML = "Mouse over me"
+        }
+    </script>
+    </body>
+</html>

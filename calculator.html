@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oclick js</title>
+</head>
+<style>
+    p{
+        color: wheat;
+        background-color: brown;
+        display: inline-block
+    }
+</style>
+<body>
+    <h1>Using JavaScript to change the Text</h1>
+    <button type="button" onclick="myfunction()">Touch meeee</button>
+    <p id="fun">What will happen if you click the button???</p>
+    <script>
+        function myfunction()
+        {
+            document.getElementById("fun").innerHTML="Welcome to my page";
+        }
+    </script>
+</body>
+</html>

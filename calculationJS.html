@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation</title>
+</head>
+<body>
+    <center><h1><u>JavaScript</u></h1></center>
+    <p id="cal"></p>
+    <h3 id="lo"></h3>
+    <h1 id="stat"></h1>
+    <p id="add"></p>
+    <h1 id="stat1"></h1>
+    <p id="sub"></p>
+    <h1 id="stat2"></h1>
+    <p id="div"></p>
+    <h1 id="stat3"></h1>
+    <p id="mul"></p>
+    <script>
+        document.getElementById("cal").innerHTML="My JavaScript Calculation";
+        document.getElementById("lo").innerHTML="My Claculation begins now...";
+        document.getElementById("stat").innerHTML="1.Addition a+b"
+        var a, b, c;
+        a=5;
+        b=6;
+        c=a+b;
+        document.getElementById("add").innerHTML="The Addition of a+b == "+c;
+
+        document.getElementById("stat1").innerHTML="2. Subraction a-b"
+        var a, b, c;
+        a=5;
+        b=8;
+        c=a-b;
+        document.getElementById("sub").innerHTML="The Subraction of a-b == "+ c;
+
+        document.getElementById("stat2").innerHTML="3. Division a/b"
+        var a, b, c;
+        a=7;
+        b=6;
+        c=a/b;
+        document.getElementById("div").innerHTML="The division of a/b == "+c;
+
+        document.getElementById("stat3").innerHTML="4. Multiplication a*b"
+        var a, b, c;
+        a=12;
+        b=6;
+        c=a*b;
+        document.getElementById("mul").innerHTML="The multiplication of a*b == " +c;
+    </script>
+</body>
+</html>

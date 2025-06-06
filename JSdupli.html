@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process User Input</title>
+</head>
+<body>
+    <h2>Enter Numbers</h2>
+    <input type="text" id="inputNum" placeholder="Enter numbers separated by commas">
+    <button onclick="processInput()">Process</button>
+    <p id="demo"></p>
+
+    <script>
+        function processInput() 
+        {
+            const input = document.getElementById('inputNum').value; // Get the user input
+            const numbers = input.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num));  // Convert the input string to an array of numbers
+            const uniqueNumbers = [...new Set(numbers)]; // Remove duplicates using Set
+            document.getElementById('demo').innerHTML = 'Unique Numbers: ' + uniqueNumbers.join(', '); // Display the unique numbers
+        }
+    </script>
+</body>
+</html>

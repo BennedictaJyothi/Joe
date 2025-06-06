@@ -1,0 +1,66 @@
+
+[
+    {
+        "name": "Labrodor",
+        "price": 5800,
+        "color": "Black",
+        "vaccination": "Up to date",
+        "image": "./dogg1.jpg"
+    },
+    {
+        "name": "German Shepherd",
+        "price": 9200,
+        "color": "Brown",
+        "vaccination": "Up to date",
+        "image": "./dogg2.jpg"
+    },
+    {
+        "name": "Husky",
+        "price": 13200,
+        "color": "Black",
+        "vaccination": "Up to date",
+        "image": "./dogg3.jpg"
+    },
+    {
+        "name": "Rottweiler",
+        "price": 11500,
+        "color": "Black",
+        "vaccination": "Up to date",
+        "image": "./dogg4.jfif"
+    },
+    {
+        "name": "Golden Retriever",
+        "price": 18300,
+        "color": "Golden Brown",
+        "vaccination": "Up to date",
+        "image": "./dogg5.jpg"
+    },
+    {
+        "name": "Beagle",
+        "price": 20000,
+        "color": "Brown",
+        "vaccination": "Up to date",
+        "image": "./dogg6.jpg"
+    },
+    {
+        "name": "Doberman",
+        "price": 6000,
+        "color": "Black",
+        "vaccination": "Up to date",
+        "image": "./dogg7.jpg"
+    },
+    {
+        "name": "Bull Dog",
+        "price": 28800,
+        "color": "Grey",
+        "vaccination": "Up to date",
+        "image": "./dogg8.jpg"
+    },
+    {
+        "name": "Boxer",
+        "price": 31800,
+        "color": "Brown",
+        "vaccination": "Up to date",
+        "image": "./dogg9.jfif"
+    }
+]
