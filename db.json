@@ -1,0 +1,8 @@
+{
+  "dresses": [
+    { "name": "Casual Wear", "price": "$49", "size": "XS, S, M", "image": "casual.jpg" },
+    { "name": "Evening Gown", "price": "$129", "size": "M, L, XL", "image": "evening.jpg" },
+    { "name": "Party Dress", "price": "$99", "size": "S, M, L", "image": "party.jpg" },
+    { "name": "Formal Suit", "price": "$199", "size": "M, L, XL", "image": "formal.jpg" }
+  ]
+}
